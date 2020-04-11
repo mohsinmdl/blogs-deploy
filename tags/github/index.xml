@@ -18,7 +18,8 @@
       <pubDate>Sat, 11 Apr 2020 17:48:07 +0500</pubDate>
       
       <guid>https://mohsinmdl.com/blogs/posts/mastering-github/</guid>
-      <description>Adding time format to the new post YYYY-MM-DDThh:mm:ssZZZ</description>
+      <description>Adding time format to the new post YYYY-MM-DDThh:mm:ssZZZ
+Remove module from .git folder ls -a cd .git cd modules/ rm -rf mdl-docs/</description>
     </item>
     
   </channel>

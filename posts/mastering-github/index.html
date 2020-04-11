@@ -63,7 +63,27 @@
 		<div class="markdown">
 			<h2 id="adding-time-format-to-the-new-post">Adding time format to the new post</h2>
 <p><code>YYYY-MM-DDThh:mm:ssZZZ</code></p>
-
+<h3 id="remove-module-from-git-folder">Remove module from .git folder</h3>
+<p>ls -a
+cd .git
+cd modules/
+rm -rf mdl-docs/</p>
+<h3 id="git-pull-with-submodule">Git Pull with Submodule</h3>
+<p>For a repo with submodules, we can pull all submodules using
+git submodule update &ndash;init &ndash;recursive</p>
+<p>for the first time. All submodules will be pulled down locally.
+To update submodules, we can use</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git submodule update --recursive --remote
+</code></pre></div><p>or simply</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git pull --recurse-submodules
+</code></pre></div><p>Pushing all submodules recursively</p>
+<p>git1.7.11 ([ANNOUNCE] Git 1.7.11.rc1) mentions:</p>
+<blockquote>
+<p>&ldquo;git push &ndash;recurse-submodules&rdquo; learned to optionally look into the histories of submodules &gt;bound to the superproject and push them out.
+So you can use:</p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git push --recurse-submodules=on-demand
+</code></pre></div>
 		</div>
 
 		<div class="post-tags">
