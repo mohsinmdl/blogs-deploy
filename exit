@@ -1,0 +1,90 @@
+[33mcommit aa56ac19d1730f58747a6972501d73f681776282[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: bilal.ahmad <bilal.ahmad@upgenicsint.com>
+Date:   Sat Apr 11 11:10:50 2020 +0500
+
+    remove unwanted custom css js
+
+[33mcommit 46de8a88cd133328e543426dcdf1a3018d170d53[m
+Author: bilal.ahmad <bilal.ahmad@upgenicsint.com>
+Date:   Sat Apr 11 10:41:32 2020 +0500
+
+    mohsinmdl.com/blogs
+
+[33mcommit 4716fd8b67139e2be12aecfaf1f93a8de5aaa150[m
+Author: bilal.ahmad <bilal.ahmad@upgenicsint.com>
+Date:   Sat Apr 11 10:18:06 2020 +0500
+
+    test3
+
+[33mcommit 3957adbf4ebbf76cdf731622ead02a0e9d4a016c[m
+Author: bilal.ahmad <bilal.ahmad@upgenicsint.com>
+Date:   Sat Apr 11 10:12:42 2020 +0500
+
+    test2
+
+[33mcommit 37146e165a6e76a65ba0cd89a58e418569c0369e[m
+Author: bilal.ahmad <bilal.ahmad@upgenicsint.com>
+Date:   Sat Apr 11 10:09:35 2020 +0500
+
+    test
+
+[33mcommit 7c05652fc98cb1878669c62032060bc64c85ba85[m
+Author: bilal.ahmad <bilal.ahmad@upgenicsint.com>
+Date:   Sat Apr 11 01:00:18 2020 +0500
+
+    blogs.mohsinmdl.com
+
+[33mcommit b4eec8f3b2b80571c99775f550c7d1803042a381[m
+Author: mohsinmdl <mohsinmahmoodmdl@gmail.com>
+Date:   Fri Apr 10 23:53:34 2020 +0500
+
+    delete cname
+
+[33mcommit c072ba866a7d11062b79b65bbfa9ada79f05d049[m
+Author: bilal.ahmad <bilal.ahmad@upgenicsint.com>
+Date:   Fri Apr 10 09:58:50 2020 +0500
+
+    change
+
+[33mcommit 489188e5ae8d415ea9f37db057c4e7ecfbecfdc2[m
+Author: bilal.ahmad <bilal.ahmad@upgenicsint.com>
+Date:   Fri Apr 10 09:53:26 2020 +0500
+
+    modification
+
+[33mcommit 0c156cdd4db95220c7462141391dda8a2d4589b3[m
+Merge: fff3b2d db7a80d
+Author: bilal.ahmad <bilal.ahmad@upgenicsint.com>
+Date:   Fri Apr 10 09:50:30 2020 +0500
+
+    Merge branch 'master' of https://github.com/mohsinmdl/mdl-blogs-deploy
+
+[33mcommit fff3b2de1c3808c60607b39cf8aeb741d47d535d[m
+Author: bilal.ahmad <bilal.ahmad@upgenicsint.com>
+Date:   Fri Apr 10 09:48:44 2020 +0500
+
+    adding_domain_mohsinmdl.com
+
+[33mcommit d0aa03630e82e0c546341073b4280733d82dcc7c[m
+Author: bilal.ahmad <bilal.ahmad@upgenicsint.com>
+Date:   Fri Apr 10 02:51:35 2020 +0500
+
+    adding CNAME file
+
+[33mcommit db7a80d11f0dc024c76596fce5e600643501a15c[m
+Author: mohsinmdl <mohsinmahmoodmdl@gmail.com>
+Date:   Fri Apr 10 02:23:46 2020 +0500
+
+    Create CNAME
+
+[33mcommit 8b6efbb9fe94b90659d82fdfe253af5dd2694ef5[m
+Author: bilal.ahmad <bilal.ahmad@upgenicsint.com>
+Date:   Fri Apr 10 02:21:35 2020 +0500
+
+    add site name
+
+[33mcommit bbe7af05a9ecc472b22c158ae82d8c18458e59b0[m
+Author: bilal.ahmad <bilal.ahmad@upgenicsint.com>
+Date:   Fri Apr 10 01:34:50 2020 +0500
+
+    first
