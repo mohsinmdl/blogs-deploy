@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Fri, 10 Apr 2020 01:49:08 +0500</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2020 17:48:07 +0500</lastBuildDate>
     
 	<atom:link href="https://mohsinmdl.com/blogs/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>github</title>
+      <link>https://mohsinmdl.com/blogs/tags/github/</link>
+      <pubDate>Sat, 11 Apr 2020 17:48:07 +0500</pubDate>
+      
+      <guid>https://mohsinmdl.com/blogs/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>training</title>
+      <link>https://mohsinmdl.com/blogs/tags/training/</link>
+      <pubDate>Sat, 11 Apr 2020 17:48:07 +0500</pubDate>
+      
+      <guid>https://mohsinmdl.com/blogs/tags/training/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://mohsinmdl.com/blogs/tags/tutorial/</link>
+      <pubDate>Sat, 11 Apr 2020 17:48:07 +0500</pubDate>
+      
+      <guid>https://mohsinmdl.com/blogs/tags/tutorial/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>hugo</title>
