@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Socket.io Guide 101 - MDL Blogs</title><link rel="icon" type="image/png" href=icons/myicon.png /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Socket.io Guide 101" />
+<meta property="og:description" content="Travel from beginer to master level via github" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mohsinmdl.com/blogs/posts/socketio/" />
+<meta property="article:published_time" content="2020-04-13T02:05:57+05:00" />
+<meta property="article:modified_time" content="2020-04-13T02:05:57+05:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Socket.io Guide 101"/>
+<meta name="twitter:description" content="Travel from beginer to master level via github"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://mohsinmdl.com/blogs/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://mohsinmdl.com/blogs/css/main.css" /><link rel="stylesheet" type="text/css" href="https://mohsinmdl.com/blogs/css/dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="https://mohsinmdl.com/blogs/js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<h1 class="site-title"><a href="https://mohsinmdl.com/blogs/">MDL Blogs</a></h1>
+	<div class="site-description"><h2>Clean and minimal personal <a href="https://mohsinmdl.com">blogs to serve you</a></h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/mohsinmdl" title="Github"><i data-feather="github"></i></a><a href="https://twitter.com/mohsinmdl" title="Twitter"><i data-feather="twitter"></i></a><a href="https://linkedin.com/in/mohsinmdl" title="Linkedin"><i data-feather="linkedin"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/blogs/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/blogs/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/blogs/about">About</a>
+			</li>
+			
+			<li>
+				<a href="/blogs/tags">Tags</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Socket.io Guide 101</h1>
+			<div class="meta">Posted at &mdash; Apr 13, 2020</div>
+		</div>
+
+		<div class="markdown">
+			<h1 id="socketiohttpssocketiodocs"><a href="https://socket.io/docs/">Socket.io</a></h1>
+<p>Socket.IO is JavaScript implementation to work with HTML 5 WebSockets. In can be used in NodeJS &amp; based server frameworks for server-side, while client-side can be integrated with pure JavaScript, AngularJS, React.</p>
+<p>Socket.IO proves to be promising with over 49K <a href="https://github.com/socketio/socket.io">GitHub Stars</a>. Furthermore it’s stable for production level with V2.0.0 being released in 2017.</p>
+<blockquote>
+<p>Quick links Documentation</p>
+</blockquote>
+<ul>
+<li><a href="https://socket.io/docs/server-api/">Server-api</a></li>
+<li><a href="https://socket.io/docs/client-api/">Client-api</a></li>
+</ul>
+<p><strong>NPM Version</strong></p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm -v
+</code></pre></div><p><strong>Node Version</strong></p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">node -v
+</code></pre></div><h2 id="0-installing-packages">0. Installing Packages</h2>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm init
+</code></pre></div><p><strong>Installing Packages</strong></p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i --save express nodemon socket.io
+</code></pre></div><p>???+ info &ldquo;What is <code>Express</code>&rdquo;
+Express.js, or simply Express, is a web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs. It has been called the de facto standard server framework for Node.js. <a href="https://en.wikipedia.org/wiki/Express.js">en.wikipedia.org</a></p>
+<p>??? info &ldquo;What is <code>Nodemon</code>&rdquo;
+Nodemon is a development dependency that monitors for any changes in your Node. js application and automatically restarts the server, saving time and tedious work.  <a href="https://medium.com/@jeffrey.allen.lewis/how-to-increase-development-efficiency-with-nodemon-and-opn-4027b96175a1">medium.com</a></p>
+<p>??? info &ldquo;What is <code>Socket.io</code>&rdquo;
+Socket.IO is JavaScript implementation to work with HTML 5 WebSockets. In can be used in NodeJS &amp; based server frameworks for server-side, while client-side can be integrated with pure JavaScript, AngularJS, React.<a href="https://socket.io/docs/">Socket.io</a></p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i --save-dev babel-cli babel-preset-env babel-preset-stage-0
+</code></pre></div><p>In <code>package.json</code> file add these lines in the script keyword</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">// package.json
+<span style="color:#2aa198">&#34;scripts&#34;</span>: {
+    <span style="color:#268bd2">&#34;start&#34;</span>: <span style="color:#2aa198">&#34;nodemon ./index.js --exec babel-node -e js&#34;</span>,
+    <span style="color:#268bd2">&#34;test&#34;</span>: <span style="color:#2aa198">&#34;DEBUG=* npm run nodemon ./index.js --exec babel-node -e js&#34;</span>
+  },
+</code></pre></div><p>Create a new file <code>.babelrc</code> with the same directory of <code>package.json</code> file.</p>
+<p>!!! hint</p>
+<pre><code>Insert the following snippet into the newly created file.
+```json
+{
+    &quot;presets&quot;: [
+        &quot;env&quot;,
+        &quot;stage-0&quot;
+    ]
+}
+```
+</code></pre>
+<p>!!! hint
+Babel is used to compile the project</p>
+<h2 id="1-simple-chat-app">1. Simple chat app</h2>
+<p>Create a file <code>index.js</code> on the same level of node_modules directory and paste the following snipet into it.</p>
+<blockquote>
+<p><a href="scripts/socketio/socketServer/index.js">index.js</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>socketServer<span style="color:#719e07">/</span>index.js<span style="color:#719e07">!</span>}
+</code></pre></div><p><img src="img/socketio/code01.png" alt="code01"></p>
+<p>Now create a directory <code>public</code> on the same level of node_modules directory.</p>
+<p>Create a file <code>index.html</code> and paste the below snippet into it.</p>
+<blockquote>
+<p><a href="scripts/socketio/socketServer/public/index.html">index.html</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>socketServer<span style="color:#719e07">/</span><span style="color:#268bd2">public</span><span style="color:#719e07">/</span>index.html<span style="color:#719e07">!</span>}
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">node run start
+</code></pre></div><p>??? error &ldquo;[nodemon] app crashed - waiting for file changes before starting&hellip;&rdquo;
+Node.JS: Getting error : [nodemon] Internal watch failed: watch ENOSPC</p>
+<pre><code>```
+events.js:183
+  throw er; // Unhandled 'error' event
+  ^
+
+Error: listen EADDRINUSE :::3000
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1367:14)
+    at listenInCluster (net.js:1408:12)
+    at Server.listen (net.js:1492:7)
+    at Object.&lt;anonymous&gt; (/home/mohsin/Desktop/chatter02/index.js:6:8)
+    at Module._compile (module.js:652:30)
+    at loader (/home/mohsin/Desktop/chatter02/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/mohsin/Desktop/chatter02/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (module.js:565:32)
+[nodemon] app crashed - waiting for file changes before starting...
+```
+</code></pre>
+<p>!!!success &quot;&rdquo;
+Solution to this problem is in the following snippet</p>
+<pre><code>```bash
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p
+```
+
+or
+
+**There is a server that's already running, so you cannot start another server.**
+</code></pre>
+<p><strong>Now, with Bootstrap</strong></p>
+<blockquote>
+<p><a href="scripts/socketio/withbootstrap/index.js">index.js</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>withbootstrap<span style="color:#719e07">/</span>index.js<span style="color:#719e07">!</span>}
+</code></pre></div><p>and the <code>index.html</code> (client) should look like this —</p>
+<blockquote>
+<p><a href="scripts/socketio/withbootstrap/public/index.html">index.html</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>withbootstrap<span style="color:#719e07">/</span><span style="color:#268bd2">public</span><span style="color:#719e07">/</span>index.html<span style="color:#719e07">!</span>}
+</code></pre></div><h2 id="2-connect--disconnect-events">2. <strong>Connect / Disconnect Events</strong></h2>
+<blockquote>
+<p><a href="scripts/socketio/connectDisconnect/index.js">index.js</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>connectDisconnect<span style="color:#719e07">/</span>index.js<span style="color:#719e07">!</span>}
+</code></pre></div><p>and the <code>index.html</code> (client) should look like this —</p>
+<blockquote>
+<p><a href="scripts/socketio/connectDisconnect/public/index.html">index.html</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>connectDisconnect<span style="color:#719e07">/</span><span style="color:#268bd2">public</span><span style="color:#719e07">/</span>index.html<span style="color:#719e07">!</span>}
+</code></pre></div><h2 id="3-namespace-setup">3. <strong>NameSpace Setup</strong></h2>
+<p>Now, we are going to add a namespace   <code>tech</code> to our server.</p>
+<blockquote>
+<p><a href="scripts/socketio/namespace/index.js">index.js</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>namespace<span style="color:#719e07">/</span>index.js<span style="color:#719e07">!</span>}
+</code></pre></div><p>and the <code>index.html</code> (client) should look like this —</p>
+<blockquote>
+<p><a href="scripts/socketio/namespace/public/index.html">index.html</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>namespace<span style="color:#719e07">/</span><span style="color:#268bd2">public</span><span style="color:#719e07">/</span>index.html<span style="color:#719e07">!</span>}
+</code></pre></div><h2 id="4-setting-up-rooms">4. Setting up Rooms</h2>
+<p><strong>Init Room Javascript</strong></p>
+<blockquote>
+<p><a href="scripts/socketio/room01/index.js">index.js</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>room01<span style="color:#719e07">/</span>index.js<span style="color:#719e07">!</span>}
+</code></pre></div><p>and the <code>index.html</code> (client) should look like this —</p>
+<blockquote>
+<p><a href="scripts/socketio/room01/public/index.html">index.html</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>room01<span style="color:#719e07">/</span><span style="color:#268bd2">public</span><span style="color:#719e07">/</span>index.html<span style="color:#719e07">!</span>}
+</code></pre></div><p>**JavaScript Room with seperate base file **</p>
+<blockquote>
+<p><a href="scripts/socketio/room02/index.js">index.js</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>room02<span style="color:#719e07">/</span>index.js<span style="color:#719e07">!</span>}
+</code></pre></div><p>and the <code>index.html</code> (client) should look like this —</p>
+<blockquote>
+<p><a href="scripts/socketio/room02/public/index.html">index.html</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>room02<span style="color:#719e07">/</span><span style="color:#268bd2">public</span><span style="color:#719e07">/</span>index.html<span style="color:#719e07">!</span>}
+</code></pre></div><blockquote>
+<p><a href="scripts/socketio/room02/public/javascript.html">javascript.html</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>room02<span style="color:#719e07">/</span><span style="color:#268bd2">public</span><span style="color:#719e07">/</span>javascript.html<span style="color:#719e07">!</span>}
+</code></pre></div><h2 id="5-complete-tech-rooms">5. <strong>Complete tech rooms</strong></h2>
+<p><img src="img/socketio/demoapp1_1.png" alt="&ldquo;DemoApp&rdquo;"></p>
+<p><img src="img/socketio/demoapp1_2.png" alt="&ldquo;DemoApp&rdquo;"></p>
+<blockquote>
+<p><a href="scripts/socketio/room03/index.js">index.js</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>room03<span style="color:#719e07">/</span>index.js<span style="color:#719e07">!</span>}
+</code></pre></div><p>and the <code>index.html</code> (client) should look like this —</p>
+<blockquote>
+<p><a href="scripts/socketio/room03/public/index.html">index.html</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>room03<span style="color:#719e07">/</span><span style="color:#268bd2">public</span><span style="color:#719e07">/</span>index.html<span style="color:#719e07">!</span>}
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>room03<span style="color:#719e07">/</span><span style="color:#268bd2">public</span><span style="color:#719e07">/</span>javascript.html<span style="color:#719e07">!</span>}
+
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>room03<span style="color:#719e07">/</span><span style="color:#268bd2">public</span><span style="color:#719e07">/</span>swift.html<span style="color:#719e07">!</span>}
+
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>room03<span style="color:#719e07">/</span><span style="color:#268bd2">public</span><span style="color:#719e07">/</span>css.html<span style="color:#719e07">!</span>}
+
+</code></pre></div><h2 id="6-chat-app-demo">6. Chat App Demo</h2>
+<p><img src="img/socketio/demoapp2.png" alt="&ldquo;DemoApp&rdquo;"></p>
+<blockquote>
+<p><a href="scripts/socketio/demoapp2/server.js">server.js</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>demoapp2<span style="color:#719e07">/</span>server.js<span style="color:#719e07">!</span>}
+</code></pre></div><blockquote>
+<p><a href="scripts/socketio/demoapp2/index.js">index.html</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+{<span style="color:#719e07">!</span>scripts<span style="color:#719e07">/</span>socketio<span style="color:#719e07">/</span>demoapp2<span style="color:#719e07">/</span>index.html<span style="color:#719e07">!</span>}
+</code></pre></div><h2 id="7-debug-tool">7. Debug Tool</h2>
+<p><strong>Manually</strong></p>
+<blockquote>
+<p>For Linux</p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">DEBUG=* npm run start
+</code></pre></div><blockquote>
+<p>For Windows</p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">set DEBUG=* &amp; npm run start
+</code></pre></div><p><strong>Automatically</strong></p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">
+{!scripts/socketio/debug/package.json!}
+
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm run <span style="color:#b58900">test</span>
+
+</code></pre></div>
+		</div>
+
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/blogs/tags/github">github</a></li>
+								
+								<li><a href="/blogs/tags/training">training</a></li>
+								
+								<li><a href="/blogs/tags/tutorial">tutorial</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+		<div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'localhost';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+		Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>feather.replace()</script>
+</body>
+</html>

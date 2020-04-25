@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mohsinmdl.com/blogs/posts/git-guide-101/</loc>
+    <lastmod>2020-04-13T02:05:57+05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mohsinmdl.com/blogs/tags/github/</loc>
     <lastmod>2020-04-13T02:05:57+05:00</lastmod>
   </url>
@@ -13,7 +18,17 @@
   </url>
   
   <url>
+    <loc>https://mohsinmdl.com/blogs/posts/nodejs101/</loc>
+    <lastmod>2020-04-13T02:05:57+05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mohsinmdl.com/blogs/posts/</loc>
+    <lastmod>2020-04-13T02:05:57+05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mohsinmdl.com/blogs/posts/socketio/</loc>
     <lastmod>2020-04-13T02:05:57+05:00</lastmod>
   </url>
   

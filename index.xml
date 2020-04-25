@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Git Guide 101</title>
+      <link>https://mohsinmdl.com/blogs/posts/git-guide-101/</link>
+      <pubDate>Mon, 13 Apr 2020 02:05:57 +0500</pubDate>
+      
+      <guid>https://mohsinmdl.com/blogs/posts/git-guide-101/</guid>
+      <description>Git Guide 101  Commit The &amp;ldquo;commit&amp;rdquo; command is used to save your changes to the local repository.
+ Initialized a repository git init Add a file to the staging area git add --all Commit files git commit -m &amp;#34;message&amp;#34; git commit -am &amp;#34;message with adding file to the staging area &amp;#34; Repository log git log Repository status git status Unstag files git reset --hard git diff &amp;lt;1stVer commit hash&amp;gt; &amp;lt;LastVer commit hash&amp;gt; ::	difference btw changes made Branch In Git, branches are a part of your everyday development process.</description>
+    </item>
+    
+    <item>
       <title>How Quick it is to edit a blog</title>
       <link>https://mohsinmdl.com/blogs/posts/how-quick-it-is-to-edit-a-blog/</link>
       <pubDate>Mon, 13 Apr 2020 02:05:57 +0500</pubDate>
@@ -20,6 +30,24 @@
       <guid>https://mohsinmdl.com/blogs/posts/how-quick-it-is-to-edit-a-blog/</guid>
       <description>Adding time format to the new post YYYY-MM-DDThh:mm:ssZZZ
 Remove module from .git folder ls -a cd .git cd modules/ rm -rf mdl-docs/</description>
+    </item>
+    
+    <item>
+      <title>NODE JS</title>
+      <link>https://mohsinmdl.com/blogs/posts/nodejs101/</link>
+      <pubDate>Mon, 13 Apr 2020 02:05:57 +0500</pubDate>
+      
+      <guid>https://mohsinmdl.com/blogs/posts/nodejs101/</guid>
+      <description>Node.js 101 Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user&amp;rsquo;s web browser.</description>
+    </item>
+    
+    <item>
+      <title>Socket.io Guide 101</title>
+      <link>https://mohsinmdl.com/blogs/posts/socketio/</link>
+      <pubDate>Mon, 13 Apr 2020 02:05:57 +0500</pubDate>
+      
+      <guid>https://mohsinmdl.com/blogs/posts/socketio/</guid>
+      <description>Socket.io Socket.IO is JavaScript implementation to work with HTML 5 WebSockets. In can be used in NodeJS &amp;amp; based server frameworks for server-side, while client-side can be integrated with pure JavaScript, AngularJS, React.</description>
     </item>
     
     <item>

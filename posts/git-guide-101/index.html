@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Git Guide 101 - MDL Blogs</title><link rel="icon" type="image/png" href=icons/myicon.png /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Git Guide 101" />
+<meta property="og:description" content="Travel from beginer to master level via github" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mohsinmdl.com/blogs/posts/git-guide-101/" />
+<meta property="article:published_time" content="2020-04-13T02:05:57+05:00" />
+<meta property="article:modified_time" content="2020-04-13T02:05:57+05:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git Guide 101"/>
+<meta name="twitter:description" content="Travel from beginer to master level via github"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://mohsinmdl.com/blogs/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://mohsinmdl.com/blogs/css/main.css" /><link rel="stylesheet" type="text/css" href="https://mohsinmdl.com/blogs/css/dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="https://mohsinmdl.com/blogs/js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<h1 class="site-title"><a href="https://mohsinmdl.com/blogs/">MDL Blogs</a></h1>
+	<div class="site-description"><h2>Clean and minimal personal <a href="https://mohsinmdl.com">blogs to serve you</a></h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/mohsinmdl" title="Github"><i data-feather="github"></i></a><a href="https://twitter.com/mohsinmdl" title="Twitter"><i data-feather="twitter"></i></a><a href="https://linkedin.com/in/mohsinmdl" title="Linkedin"><i data-feather="linkedin"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/blogs/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/blogs/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/blogs/about">About</a>
+			</li>
+			
+			<li>
+				<a href="/blogs/tags">Tags</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Git Guide 101</h1>
+			<div class="meta">Posted at &mdash; Apr 13, 2020</div>
+		</div>
+
+		<div class="markdown">
+			<h1 id="git-guide-101">Git Guide 101</h1>
+<hr>
+<h2 id="commit">Commit</h2>
+<p>The &ldquo;commit&rdquo; command is used to save your changes to the local repository.</p>
+<hr>
+<h3 id="initialized-a-repository">Initialized a repository</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git init
+</code></pre></div><h3 id="add-a-file-to-the-staging-area">Add a file to the staging area</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git add --all
+
+</code></pre></div><h3 id="commit-files">Commit files</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git commit -m &#34;message&#34;
+git commit -am &#34;message with adding file to the staging area &#34;
+</code></pre></div><h3 id="repository-log">Repository log</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git log
+</code></pre></div><h3 id="repository-status">Repository status</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git status 
+</code></pre></div><h3 id="unstag-files">Unstag files</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git reset --hard
+
+
+git diff &lt;1stVer commit hash&gt; &lt;LastVer commit hash&gt; ::	difference btw changes made 
+
+</code></pre></div><h2 id="branch">Branch</h2>
+<p>In Git, branches are a part of your everyday development process. Git branches are effectively a pointer to a snapshot of your changes. When you want to add a new feature or fix a bug—no matter how big or how small—you spawn a new branch to encapsulate your changes. This makes it harder for unstable code to get merged into the main code base, and it gives you the chance to clean up your future&rsquo;s history before merging it into the main branch.</p>
+<hr>
+<h3 id="create-a-branch">Create a branch</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git branch &lt;branch-name&gt;
+git checkout -b &lt;branch-name&gt;
+</code></pre></div><h3 id="merge-branch">Merge branch</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git merge &lt;source-branch-name&gt;
+</code></pre></div><h3 id="list-branches">List branches</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git branch 
+git brach --list
+</code></pre></div><h3 id="remove-branch">Remove branch</h3>
+<h5 id="remotly">Remotly</h5>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git push origin --delete &lt;branch-name&gt;
+</code></pre></div><h5 id="locally">Locally</h5>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git branch -d &lt;branch-name&gt;
+</code></pre></div><h3 id="create-a-tag">Create a tag</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git tag &lt;tag-name&gt;
+</code></pre></div><h3 id="replace-a-tag">Replace a tag</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git tag -f &lt;new-tag-name&gt;
+</code></pre></div><h3 id="list-tags">List tags</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git tag -l
+git tag
+</code></pre></div><h3 id="remove-tag">Remove tag</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git tag -d &lt;tag-name&gt;
+</code></pre></div><h2 id="fix-common-issues">Fix Common issues</h2>
+<hr>
+<h3 id="heading"></h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git log --oneline
+</code></pre></div><h3 id="ammend-wiht-previous-commits">Ammend wiht previous commits</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
+git status
+git add --all
+git commit ammend
+git log --oneline
+</code></pre></div><p>!!! warning &ldquo;Be carefull!&rdquo;
+When you <code>ammend</code> a commit, this will remove the tag from the commit if it has already</p>
+<h3 id="add-tag-to-the-latest-ammend">Add tag to the latest ammend</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git tag
+git log --online
+git tag -f &lt;update-tag&gt;
+</code></pre></div><h3 id="show-all-changes">Show all changes</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git reflog
+
+</code></pre></div><h3 id="checkout-differert-state-in-the-repository">Checkout differert state in the repository</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git reset HEAD@{5}
+</code></pre></div><p><code>Changes sitting there</code></p>
+<h4 id="older-version-of-this-file">older version of this file</h4>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git reset --hard
+
+
+or
+
+git reset HEAD@{3} --hard
+</code></pre></div><h3 id="reset-back-to-previous-commits">Reset Back to previous commits.</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git log --oneline
+git reset HEAD~2 --hard
+
+</code></pre></div><h3 id="last-commit-gone-but-changes-sitting-there">Last Commit gone but changes sitting there</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git reset HEAD~ --soft
+</code></pre></div><h3 id="stash----file-no-need-to-put-into-stage">Stash &ndash; file no need to put into stage</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git stash
+</code></pre></div><h3 id="take-stash-file-to-the-stage-folder">Take stash file to the stage folder</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git stash pop
+git add --all
+git commit -m &#34;&lt;message&gt;&#34;
+</code></pre></div><h3 id="switch-between-branches-ab-ba">Switch between branches A/B B/A</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git checkout &lt;branch-name&gt; 
+
+</code></pre></div><h2 id="add-and-push-an-existing-repository">Add and Push an existing repository</h2>
+<hr>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git remote add origin &lt;link-to-github-repo&gt;
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git remote add origin https://github.com/mohsinmdl/GTIN-Prediction-System.git
+git push -u origin master
+
+</code></pre></div><h2 id="list-your-existing-remotes">List your existing remotes</h2>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ git remote -v
+</code></pre></div><h2 id="change-a-remote-git-repository">Change a remote Git repository</h2>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git remote set-url origin git@your.git.repo.example.com:user/repository2.git
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">You can check the configs of your repository by :
+
+git config -l
+which contains your remote repository url.
+
+Also, you can use the following command :
+
+git remote -v
+
+</code></pre></div><h2 id="add-submodule-to-git-repo">Add submodule to git repo</h2>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git submodule add https://github.com/mohsinmdl/mohsinmdl.github.io.git site
+</code></pre></div><h2 id="update-git-submodule-to-latest-commit-on-origin">Update Git submodule to latest commit on origin</h2>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git submodule update --remote --merge
+</code></pre></div><h2 id="remove-git-from-directory">Remove git from directory</h2>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">rm -rf .git
+</code></pre></div><h2 id="error">Error</h2>
+<p>Git refusing to merge unrelated histories</p>
+<p>!!! failure
+git  pull origin master
+From <a href="https://github.com/mohsinmdl/mdl-portfolio">https://github.com/mohsinmdl/mdl-portfolio</a>
+* branch            master     -&gt; FETCH_HEAD
+fatal: refusing to merge unrelated histories</p>
+<p>!!! failure
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.</p>
+<h3 id="solution">solution</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git pull origin branchname --allow-unrelated-histories
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git --work-tree=&#34;.&#34; pull --allow-unrelated-histories
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git branch --set-upstream-to=origin/master
+
+</code></pre></div><h2 id="save-vscode-git-credentials">Save VSCODE Git Credentials</h2>
+<p>If you wanna save your git password in VSCode, below is the command for that purpose &ndash;</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git config --global credential.helper store
+
+</code></pre></div><p>!!! failure
+git submodule add <a href="https://github.com/mohsinmdl/blogs-deploy">https://github.com/mohsinmdl/blogs-deploy</a> public
+&lsquo;public&rsquo; already exists in the index</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git ls-files
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git rm --cached &lt;DIR&gt;
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git rm -f --cached &lt;DIR&gt;
+</code></pre></div><p>Error
+!!! failure
+fatal: Please stage your changes to .gitmodules or stash them to proceed</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git rm --cached .gitmodules
+</code></pre></div><h3 id="remove-module-from-git-folder">Remove module from .git folder</h3>
+<p>ls -a
+cd .git
+cd modules/
+rm -rf mdl-docs/</p>
+<hr>
+<h3 id="git-pull-with-submodule">Git Pull with Submodule</h3>
+<p>For a repo with submodules, we can pull all submodules using</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git submodule update --init --recursive
+</code></pre></div><p>for the first time. All submodules will be pulled down locally.</p>
+<p>To update submodules, we can use</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git submodule update --recursive --remote
+</code></pre></div><p>or simply</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git pull --recurse-submodules
+</code></pre></div><p><strong>Update Git submodule to latest commit on origin</strong></p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git submodule foreach git checkout master
+</code></pre></div><hr>
+<h2 id="push-all-submodules-recursively">Push all submodules recursively</h2>
+<p>git1.7.11 ([ANNOUNCE] Git 1.7.11.rc1) mentions:</p>
+<blockquote>
+<p>&ldquo;git push &ndash;recurse-submodules&rdquo; learned to optionally look into the histories of submodules &gt;bound to the superproject and push them out.
+So you can use:</p>
+</blockquote>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git push --recurse-submodules=on-demand
+</code></pre></div>
+		</div>
+
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/blogs/tags/github">github</a></li>
+								
+								<li><a href="/blogs/tags/training">training</a></li>
+								
+								<li><a href="/blogs/tags/tutorial">tutorial</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+		<div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'localhost';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+		Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>feather.replace()</script>
+</body>
+</html>
